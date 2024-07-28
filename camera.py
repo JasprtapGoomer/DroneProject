@@ -1,3 +1,4 @@
+#@author Jaspartap
 #This is a gui code which access you rcameras and the basic models for image proccesing and facial detection
 import cv2
 import face_recognition
