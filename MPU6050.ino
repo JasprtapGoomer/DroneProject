@@ -97,3 +97,18 @@ void loop() {
     Serial.println("Client Disconnected.");
   }
 }
+// Pin connected to the PWM-controlled device
+const int pwmPin = 9;  // Change this to your specific pin
+
+void setup() {
+  // Set the PWM pin as an output
+  pinMode(pwmPin, OUTPUT);
+}
+
+//void loop() {
+  // Write PWM signal with a value between 0-255
+ // analogWrite(pwmPin, 128); // 50% duty cycle
+  //delay(1000);              // Wait for 1 second
+ // analogWrite(pwmPin, 255); // 100% duty cycle
+ // delay(1000);              // Wait for 1 second
+//}
