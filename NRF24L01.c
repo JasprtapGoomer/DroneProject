@@ -85,5 +85,18 @@ void nrfsendCmd(uint8_t cmd){
 void NRF24_Init (void){
 	//Disable the chip before configuring the device
 	CE_Disable();
-	nrf24_WriteReg(Reg, Data);
+	nrf24_WriteReg(CONFIG, 0);
+
+	nrf24_WriteReg(EN_AA, 0); // Not Enabling AutoAck
+
+	nrf24_WriteReg(EN_RXADDR, 0); // Not enabling any data for pipe
+
+	nrf24_WriteReg(SETUP_AW, 0x03); // 5 bytes for TX/RX
+
+	nrf24_WriteReg(SETUP_RETR, 0); // No Retransmission
+
+	nrf24_WriteReg(RF_CH, 0); // WIll be setup during TX or RX
+
+	nrf24_WriteReg(RF_SETUP, 0x0E); // Power = 0dB, Data Rate = 2Mbps
+
 }
